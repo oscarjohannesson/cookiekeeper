@@ -1,0 +1,21 @@
+﻿{
+  "name": "Cookiekeeper",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is a simple extension for keeping cookies between session, and loading custom cookies",
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "storage",
+    "cookies"
+  ],
+  "action": {
+    "default_title": "Cookiekeeper",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "cookie.png"
+    }
+  }
+}
