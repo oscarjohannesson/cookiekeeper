@@ -1,10 +1,100 @@
-﻿<!DOCTYPE html>
-<html>
-<body style="min-width:250px;min-height:100px">
-Cookie&nbsp;<input type="text" id="id_cookiestring" size=50 value=""><br><br>
-<input type="button" id="id_button_load" value="Load">
-<input type="button" id="id_button_save" value="Save"><br>
-<input type="button" id="id_button_apply" value="Apply Cookie String">
-<script type="text/javascript" src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Loader</title>
+  <style>
+    body {
+      width: 600px;
+      height: 600px;
+      padding: 15px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #cookieList {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cookieItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    .removeButton {
+      background-color: #f44336;
+      color: white;
+      padding: 5px 8px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 5px;
+    }
+
+    .removeButton:hover {
+      margin-left: 5px;
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Enter Cookie:</h3>
+  <label for="cookieName">Name:</label>
+  <input type="text" id="cookieName" placeholder="Cookie Name">
+  <br>
+  <label for="cookieValue">Value:</label>
+  <input type="text" id="cookieValue" placeholder="Cookie Value">
+  <br>
+  <label for="siteUrl">Site URL:</label>
+  <input type="text" id="siteUrl" placeholder="Enter site URL">
+  <br>
+  <button id="loadCookie">Load Cookie</button>
+
+  <div id="cookieList">
+    <h3>Loaded Cookies:</h3>
+    <ul id="loadedCookies"></ul>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
+
 </html>
