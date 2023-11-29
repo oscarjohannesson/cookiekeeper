@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       if (cookieName && cookieValue && siteUrl) {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-          chrome.tabs.sendMessage(tabs[0].id, { message: "loadCookie", name: cookieName, value: cookieValue, siteUrl: siteUrl });
+          
   
           // Display the loaded cookie in the list with remove button
           var listItem = document.createElement('li');
